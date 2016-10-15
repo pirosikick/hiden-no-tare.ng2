@@ -6,6 +6,9 @@
   "scripts": {
     "start": "npm run serve",
     "serve": "webpack-dev-server",
+    "webpack-dev-server": "webpack-dev-server",
+    "copy-libs": "./scripts/copy-libs.sh",
+    "clean": "rm -r dist/libs dist/scripts",
     "postinstall": "typings install",
     "typings": "typings"
   },
@@ -38,6 +41,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.0.0",
+    "npm-run-all": "^3.1.0",
     "ts-loader": "^0.9.1",
     "typescript": "^2.0.3",
     "typings": "^1.4.0",
