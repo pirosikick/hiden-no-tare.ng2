@@ -16,8 +16,16 @@ module.exports = {
     loaders: [
       {
         test: /\.tsx?/,
-        loader: 'ts-loader',
+        loaders: [
+          'awesome-typescript-loader',
+          'angular2-template-loader',
+        ],
+        exclude: [/\.(spec|e2e)\.ts$/],
       },
+      {
+        test: /\.(html|css)/,
+        loader: 'raw-loader',
+      }
     ]
   },
   devServer: {
